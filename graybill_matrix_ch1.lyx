@@ -1,0 +1,2397 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+
+
+%*********************************************************************
+
+\usepackage{kotex}
+
+
+
+%*********************************************************************
+
+%\usepackage{unicode-math}
+%\setmathfont{Cambria Math}
+%\usepackage{mathptmx}
+
+
+
+% The following loads mtpro2 lite and defines some common options
+%\usepackage[lite,subscriptcorrection,slantedGreek,nofontinfo]{mtpro2}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\theoremstyle{definition}
+
+%\newtheorem{defi}{정의}
+%\newtheorem{thm}{정리}
+%\newtheorem{lem}{보조정리}
+%\newtheorem{cor}{따름정리}
+
+%*********************************************************************
+\numberwithin{equation}{section}
+%*********************************************************************
+\end_preamble
+\use_default_options false
+\begin_modules
+theorems-std
+theorems-sec
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding utf8
+\fontencoding T1
+\font_roman "times" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "newtxmath" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 2
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Prerequisite Matrix Theory
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+Since this book assumes that the reader has had a course that includes a
+ number of theorems on matrices and vectors, in the first three chapters
+ we shall state without proof some theorems that are generally proved in
+ a first course.
+ These are stated here for the sake of completeness and so that we can refer
+ to them in later chapters.
+ They do not necessarily appear in the same order that would be normal in
+ a text on matrix algebra.
+\end_layout
+
+\begin_layout Section
+Notations and Definitions
+\end_layout
+
+\begin_layout Standard
+In this book, matrices are denoted by boldface uppercase letters-for example,
+ 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{U}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{Z}$
+\end_inset
+
+.
+ We define a matrix to be a rectanqular array of elements, called scalars,
+ from a field 
+\begin_inset Formula $F$
+\end_inset
+
+.
+ Rather than making specific reference to the field 
+\begin_inset Formula $F$
+\end_inset
+
+, we shall assume it is the field of real numbers unless explicitly stated
+ otherwise.
+ Thus, a scalar will always be a real number, unless otherwise stated.
+ The set of real numbers is denoted by 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+ The matrix 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ has elements denoted by 
+\begin_inset Formula $a_{ij}$
+\end_inset
+
+, where 
+\begin_inset Formula $j$
+\end_inset
+
+ refers to the column and 
+\begin_inset Formula $i$
+\end_inset
+
+ to the row.
+ We sometimes write
+\begin_inset Formula 
+\[
+\mathbf{A}=[a_{ij}].
+\]
+
+\end_inset
+
+ If 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ denotes a matrix, then 
+\begin_inset Formula $\mathbf{A}'$
+\end_inset
+
+ will denote the transpose of 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+, and if 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ has an inverse, it will be denoted by 
+\begin_inset Formula $\mathbf{A}^{-1}$
+\end_inset
+
+.
+ The determinate of 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ will be denoted by either 
+\begin_inset Formula $|\mathbf{A}|$
+\end_inset
+
+ or 
+\begin_inset Formula $\mathrm{det}(\mathbf{A})$
+\end_inset
+
+.
+ An identity matrix.
+ will be denoted by 
+\begin_inset Formula $\mathbf{I}$
+\end_inset
+
+ (to designate the size of the identity, we shall use 
+\begin_inset Formula $\mathbf{I}_{n}$
+\end_inset
+
+ to represent the 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ identity matrix), and 
+\begin_inset Formula $\boldsymbol{0}$
+\end_inset
+
+ will denote a null matrix.
+ The size (or order) of a matrix is the number of its rows by the number
+ of its columns.
+ For example, a matrix 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ of size 
+\begin_inset Formula $n\times m$
+\end_inset
+
+, or an 
+\begin_inset Formula $n\times m$
+\end_inset
+
+ matrix 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+, will be a matrix 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ with 
+\begin_inset Formula $n$
+\end_inset
+
+ rows and 
+\begin_inset Formula $m$
+\end_inset
+
+ columns.
+ If 
+\begin_inset Formula $m=1$
+\end_inset
+
+, the matrix will sometimes be called an 
+\begin_inset Formula $n\times1$
+\end_inset
+
+ (column) vector.
+ The rank of the matrix 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ will sometimes be denoted by 
+\begin_inset Formula $\rho(\mathbf{A})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Given the matrices 
+\begin_inset Formula $\mathbf{A}=[a_{ij}]$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{B}=[b_{ij}]$
+\end_inset
+
+, the product 
+\begin_inset Formula $\mathbf{AB}=\mathbf{C}=[c_{ij}]$
+\end_inset
+
+ is defined as the matrix 
+\begin_inset Formula $\mathbf{C}$
+\end_inset
+
+ with 
+\begin_inset Formula $pq$
+\end_inset
+
+-th element equal to 
+\begin_inset Formula 
+\[
+\sum_{s=1}^{n}a_{ps}b_{sq},
+\]
+
+\end_inset
+
+For 
+\begin_inset Formula $\mathbf{AB}$
+\end_inset
+
+ to be defined, the number of columns in 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ must equal the number of rows in 
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $\mathbf{A}+\mathbf{B}$
+\end_inset
+
+ to be defined, 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+ must have the same size; 
+\begin_inset Formula $\mathbf{A}+\mathbf{B}=\mathbf{C}$
+\end_inset
+
+ gives 
+\begin_inset Formula $c_{ij}=a_{ij}+b_{ij}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $k$
+\end_inset
+
+ is a scalar and 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ is a matrix, then 
+\begin_inset Formula $k\mathbf{A}$
+\end_inset
+
+ (and 
+\begin_inset Formula $\mathbf{A}k$
+\end_inset
+
+) is defined to be a matrix 
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+ such that each element of 
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+ is the corresponding element of 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ multiplied by 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ A diagonal matrix 
+\begin_inset Formula $\mathbf{D}$
+\end_inset
+
+ is defined as a square matrix whose off-diagonal elements are zero; that
+ is, if 
+\begin_inset Formula $\mathbf{D}=[d_{ij}]$
+\end_inset
+
+, then 
+\begin_inset Formula $d_{ij}=0$
+\end_inset
+
+ if 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Inverse
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ be a square matrix.
+ If there exists a matrix 
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\mathbf{AB=I}$
+\end_inset
+
+, then 
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+ is called the inverse of 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+, denoted by 
+\begin_inset Formula $\mathbf{A}^{-1}$
+\end_inset
+
+.
+ Also if 
+\begin_inset Formula $\mathbf{AB=I}$
+\end_inset
+
+, then it can be shown that 
+\begin_inset Formula $\mathbf{BA=I}$
+\end_inset
+
+.
+ When there exists a matrix 
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\mathbf{AB=BA=I}$
+\end_inset
+
+, the matrix 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ is said to be non-singular; in the contrary case, 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ is said to be singular.
+\end_layout
+
+\begin_layout Theorem
+If a matrix has an inverse, the inverse is unique.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+If 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ has an inverse, then 
+\begin_inset Formula $\mathbf{A}^{-1}$
+\end_inset
+
+ has an inverse and 
+\begin_inset Formula $(\mathbf{A}^{-1})^{-1}=\mathbf{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+If 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+ are nonsingular matrices, then 
+\begin_inset Formula $\mathbf{AB}$
+\end_inset
+
+ has an inverse and 
+\begin_inset Formula $(\mathbf{AB})^{-1}=\mathbf{B}^{-1}\mathbf{A}^{-1}$
+\end_inset
+
+.
+ This can be extended to any finite number of matrices.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+If 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ is a nonsingular matrix and 
+\begin_inset Formula $k$
+\end_inset
+
+ is a nonzero scalar, then 
+\begin_inset Formula 
+\[
+(k\mathbf{A})^{-1}=(\mathbf{A}k)^{-1}=\frac{1}{k}\mathbf{A}^{-1}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Transpose of a Matrix
+\end_layout
+
+\begin_layout Standard
+If the rows and columns of a matrix 
+\begin_inset Formula $\mathbf{A}'$
+\end_inset
+
+ are interchanged, the resulting matrix is called the transpose of 
+\begin_inset Formula $\mathbf{A}'$
+\end_inset
+
+ and denoted by 
+\begin_inset Formula $\mathbf{A}'$
+\end_inset
+
+ (sometimes 
+\begin_inset Formula $\mathbf{A}^{T}$
+\end_inset
+
+).
+ If A has size 
+\begin_inset Formula $m\times n$
+\end_inset
+
+, then 
+\begin_inset Formula $\mathbf{A}'$
+\end_inset
+
+ has size 
+\begin_inset Formula $n\times m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+If 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+ are 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrices, and 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+ are scalars, then 
+\begin_inset Formula 
+\[
+(a\mathbf{A})'=(\mathbf{A}a)'=\mathbf{A}'a=a\mathbf{A}'
+\]
+
+\end_inset
+
+and 
+\begin_inset Formula 
+\[
+(a\mathbf{A}+b\mathbf{B})'=a\mathbf{A}'+b\mathbf{B}'.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+If 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ is any matrix, then 
+\begin_inset Formula 
+\[
+(\mathbf{A}')'=\mathbf{A}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+Let 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+ be 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrices; then
+\begin_inset Formula 
+\[
+\mathbf{A}'=\mathbf{B}'
+\]
+
+\end_inset
+
+if and only if 
+\begin_inset Formula 
+\[
+\mathbf{A}=\mathbf{B}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+Let 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+ be any matrices such that 
+\begin_inset Formula $\mathbf{AB}$
+\end_inset
+
+ is defined; then
+\begin_inset Formula 
+\[
+(\mathbf{AB})'=\mathbf{B}'\mathbf{A}'.
+\]
+
+\end_inset
+
+ This can be extended to any finite number of matrices.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+If 
+\begin_inset Formula $\mathbf{D}$
+\end_inset
+
+ is a diagonal matrix, then 
+\begin_inset Formula $\mathbf{D}=\mathbf{D}'$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $\mathbf{A}=\mathbf{A}'$
+\end_inset
+
+, then 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ is called a 
+\emph on
+symmetric 
+\emph default
+matrix, and if 
+\begin_inset Formula $\mathbf{A}=-\mathbf{A}'$
+\end_inset
+
+, then 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ is called a 
+\emph on
+skew-symmetric
+\emph default
+ matrix.
+\end_layout
+
+\begin_layout Theorem
+If 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ is any matrix, then 
+\begin_inset Formula $\mathbf{A}'\mathbf{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{A}\mathbf{A}'$
+\end_inset
+
+ are symmetric.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+If 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ is a nonsingular matrix, then 
+\begin_inset Formula $\mathbf{A}'$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{A}^{-1}$
+\end_inset
+
+ are nonsingular and 
+\begin_inset Formula $(\mathbf{A}')^{-1}=(\mathbf{A}^{-1})'$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Determinants
+\end_layout
+
+\begin_layout Standard
+Assuming that you are acquainted with the definition of the determinant
+ of a square matrix 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+, we now state some theorems that will be useful in later developments of
+ the topic.
+ The matrices 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{C}$
+\end_inset
+
+ discussed in this section are assumed to have size 
+\begin_inset Formula $n\times n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+All rows of a matrix may be interchanged with the corresponding columns
+ of the matrix without changing the (value of the) determinant 0f the matrix;
+ that is, 
+\begin_inset Formula $|\mathbf{A}|=|\mathbf{A}'|.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+Any theorem about 
+\begin_inset Formula $\mathrm{det}(\mathbf{A})$
+\end_inset
+
+ that is true for rows (columns) of a matrix 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ is also true for columns (rows).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+If two rows (columns) of a matrix are interchanged, the determinants of
+ the matrix changes sign.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+If each element of the 
+\begin_inset Formula $i-th$
+\end_inset
+
+ row of an 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ contains a given factor 
+\begin_inset Formula $k$
+\end_inset
+
+, then we may write 
+\begin_inset Formula $|\mathbf{A}|=k|\mathbf{B}|$
+\end_inset
+
+, where the rows of 
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+ are the same as the rows of 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ except that the number 
+\begin_inset Formula $k$
+\end_inset
+
+ has been factored from each element of the 
+\begin_inset Formula $i-th$
+\end_inset
+
+ row of 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+If each element of a row of the matrix 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ is zero, then 
+\begin_inset Formula $|\mathbf{A}|=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+If two rows of a matrix 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ are identical, then 
+\begin_inset Formula $|\mathbf{A}|=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+The determinant of a matrix is not changed if the elements of the 
+\begin_inset Formula $i-th$
+\end_inset
+
+ row are multiplied by a scalar 
+\begin_inset Formula $k$
+\end_inset
+
+ and the results are added to the corresponding elements of the 
+\begin_inset Formula $h-th$
+\end_inset
+
+ row, 
+\begin_inset Formula $h\neq i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+If 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+ are 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrices, then
+\begin_inset Formula 
+\[
+\mathrm{det}(\mathbf{AB})=\left[\mathrm{det}(\mathbf{A})\right]\left[\mathrm{det}(\mathbf{B})\right].
+\]
+
+\end_inset
+
+This result can be extended to any finite number of matrices.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ be any 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrix.
+ From this matrix, if one deletes any set of 
+\begin_inset Formula $r<m$
+\end_inset
+
+ rows and any set of 
+\begin_inset Formula $s<n$
+\end_inset
+
+ columns, the matrix of the remaining elements is a submatrix of 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+.
+ If the 
+\begin_inset Formula $i_{1},i_{2},...,i_{h}$
+\end_inset
+
+ rows and the 
+\begin_inset Formula $i_{1},i_{2},...,i_{h}$
+\end_inset
+
+ columns of a matrix 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ are deleted, and if 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ is an 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix with 
+\begin_inset Formula $n>h$
+\end_inset
+
+, the matrix of the remaining elements is called a 
+\emph on
+principal matrix
+\emph default
+ of 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ and the determinant of this matrix is called a 
+\emph on
+principal minor
+\emph default
+ of 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ is an 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix and if the last 
+\begin_inset Formula $n-r$
+\end_inset
+
+ rows and 
+\begin_inset Formula $n-r$
+\end_inset
+
+ columns of 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ are deleted, the resulting matrix is called the 
+\emph on
+leading principal matrix of order r
+\emph default
+ and the determinant of this matrix is called the 
+\emph on
+leading principal minor of order r
+\emph default
+ of 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ is an 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix and if the 
+\begin_inset Formula $i$
+\end_inset
+
+-th row and 
+\begin_inset Formula $j$
+\end_inset
+
+-th column are deleted, the determinant of the remaining matrix, denoted
+ by 
+\begin_inset Formula $m_{ij}$
+\end_inset
+
+, is called the 
+\emph on
+minor
+\emph default
+ of 
+\begin_inset Formula $a_{ij}$
+\end_inset
+
+.
+ We call 
+\begin_inset Formula $A_{ij}$
+\end_inset
+
+ the cofactor of the element 
+\begin_inset Formula $a_{ij}$
+\end_inset
+
+, where
+\begin_inset Formula 
+\[
+A_{ij}=(-1)^{i+j}m_{ij}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+Let 
+\begin_inset Formula $A_{ij}$
+\end_inset
+
+ be the cofactor of 
+\begin_inset Formula $a_{ij}$
+\end_inset
+
+; then 
+\begin_inset Formula 
+\[
+\mathrm{det}(\mathbf{A})=\sum_{j=1}^{n}a_{ij}A_{ij}
+\]
+
+\end_inset
+
+ for any 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+Let 
+\begin_inset Formula $A_{ij}$
+\end_inset
+
+ be the cofactor of 
+\begin_inset Formula $a_{ij}$
+\end_inset
+
+; then 
+\begin_inset Formula 
+\[
+\mathrm{det}(\mathbf{A})=\sum_{i=1}^{n}a_{ij}A_{ij}
+\]
+
+\end_inset
+
+ for any 
+\begin_inset Formula $j$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+Let 
+\begin_inset Formula $A_{ij}$
+\end_inset
+
+ be the cofactor of 
+\begin_inset Formula $a_{ij}$
+\end_inset
+
+; then 
+\begin_inset Formula 
+\[
+\sum_{j=1}^{n}a_{ij}A_{kj}=0
+\]
+
+\end_inset
+
+ for any 
+\begin_inset Formula $k\neq i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+If 
+\begin_inset Formula $\mathbf{A}=[a_{ij}]$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{B}=[b_{ij}]$
+\end_inset
+
+ are 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrices that are identical for all elements except for corresponding elements
+ in the 
+\begin_inset Formula $k$
+\end_inset
+
+-th row and if 
+\begin_inset Formula $\mathbf{C}=[c_{ij}]$
+\end_inset
+
+ is an 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix, then 
+\begin_inset Formula $\mathrm{det}(\mathbf{A})+\mathrm{det}(\mathbf{B})=\mathrm{det}(\mathbf{C})$
+\end_inset
+
+, where 
+\begin_inset Formula $c_{ij}=a_{ij}$
+\end_inset
+
+, except in the 
+\begin_inset Formula $k$
+\end_inset
+
+-th row, in which 
+\begin_inset Formula $c_{jk}=a_{kj}+b_{kj}$
+\end_inset
+
+; 
+\begin_inset Formula $j=1,2,\ldots,n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+Let 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ be an 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix; 
+\begin_inset Formula $|\mathbf{A}|=0$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ is a singular matrix.
+\end_layout
+
+\begin_layout Section
+Rank of Matrices
+\end_layout
+
+\begin_layout Standard
+An 
+\begin_inset Formula $n\times m$
+\end_inset
+
+ matrix 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ is said to be of rank 
+\begin_inset Formula $r$
+\end_inset
+
+ if the size of the largest nonsingular square submatrix of 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ is r.
+\end_layout
+
+\begin_layout Standard
+It is generally difficult to find the rank of a matrix by using this definition,
+ since a matrix contains many submatrices.
+ We shall give some theorems on the rank of a matrix after first defining
+ elementary transformations.
+\end_layout
+
+\begin_layout Standard
+Each of the following operations is called an elementary transformation
+ of a matrix 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Enumerate
+The interchange of two rows (two columns) of 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+The multiplication of the elements of a row (or a column) of 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ by the same nonzero scalar 
+\begin_inset Formula $k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+The addition of the elements of a row of 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+, after they have been multiplied by the scalar 
+\begin_inset Formula $k$
+\end_inset
+
+, to the corresponding element of another row of 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+.
+ A corresponding statement can be regarding columns.
+\end_layout
+
+\begin_layout Standard
+We define the 
+\emph on
+inverse of an elementary transformation
+\emph default
+ as the transformation that restores the resulting matrix to the original
+ form of 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We observe that the inverse of each elementary transformation is a transformatio
+n of the same type.
+ For (1), if the same two rows (or columns) are again interchanged, the
+ resulting matrix is again 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+.
+ For (2), if the elernents of the altered row (or column) are multiplied
+ by 
+\begin_inset Formula $1/k$
+\end_inset
+
+, the matrix 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ is again obtained.
+ Finally, for (3), if the same row (or column) of 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ is multiplied by 
+\begin_inset Formula $-k$
+\end_inset
+
+ and the result added to the corresponding elements of the other row (or
+ column) referred to in (3), then 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ is again the original matrix.
+ These results can be stated in the form of the theorem that follows.
+\end_layout
+
+\begin_layout Theorem
+The inverse of an elementary transformatton of a matrix is an elementary
+ transformation of the same type.
+\end_layout
+
+\begin_layout Standard
+The following theorem is useful in finding the rank of a matrix.
+\end_layout
+
+\begin_layout Theorem
+The size and rank of a matrix are not altered by an elementary transformation
+ of the matrix.
+\end_layout
+
+\begin_layout Standard
+Two matrices that have the 
+\emph on
+same size and the same rank
+\emph default
+ are said to be 
+\emph on
+equivalent
+\emph default
+.
+\end_layout
+
+\begin_layout Theorem
+Two matrices that are equivalent can be transformed from one to the other
+ by a succession of elementary transformations.
+\end_layout
+
+\begin_layout Standard
+We now show how the various elementary transformations can be accomplished
+ through multiplication by certain matrices called 
+\emph on
+elementary transformation matrices
+\emph default
+, or simply 
+\emph on
+elementary matrices
+\emph default
+.
+ These matrices will be denoted by 
+\begin_inset Formula $\mathbf{E}_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{E}_{2}$
+\end_inset
+
+, and 
+\begin_inset Formula $\mathbf{E}_{3}$
+\end_inset
+
+; the subscripts correspond to the three types of transformations discussed
+ above.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{E}_{1}$
+\end_inset
+
+ is an elementary matrix that interchanges two rows (or columns) of 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{E}_{2}$
+\end_inset
+
+ is an elementary matrix that multiplies a row (or column) of 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ by the non- zero scalar 
+\begin_inset Formula $k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{E}_{3}$
+\end_inset
+
+ is an elementary matrix that adds the scalar 
+\begin_inset Formula $k$
+\end_inset
+
+ times each element in a row (column) to the corresponding element in another
+ row (column).
+\end_layout
+
+\begin_layout Standard
+Since the verification that the elementary matrices 
+\begin_inset Formula $\mathbf{E}_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{E}_{2}$
+\end_inset
+
+, and 
+\begin_inset Formula $\mathbf{E}_{3}$
+\end_inset
+
+ perform the transformations as given is rather lengthy, we content ourselves
+ with illustrations using 
+\begin_inset Formula $3\times3$
+\end_inset
+
+ matrices; note, however, that the elementary transformation matrices arc
+ all square, but the matrix upon which they operate need not be square.
+\end_layout
+
+\begin_layout Standard
+The interchange of two rows of 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ can be accomplished by interchanging the corresponding rows of 
+\begin_inset Formula $\mathbf{I}$
+\end_inset
+
+ to get the elementary row matrix 
+\begin_inset Formula $\mathbf{E}_{1}$
+\end_inset
+
+ and then premultiplying 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ by 
+\begin_inset Formula $\mathbf{E}_{1}$
+\end_inset
+
+.
+ The first and third rows of 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ are interchanged in the following illustration.
+\begin_inset Formula 
+\[
+\mathbf{E}_{1}\mathbf{A}=\left[\begin{array}{ccc}
+0 & 0 & 1\\
+0 & 1 & 0\\
+1 & 0 & 0
+\end{array}\right]\left[\begin{array}{ccc}
+2 & 1 & 3\\
+1 & 0 & 2\\
+4 & 1 & 2
+\end{array}\right]=\left[\begin{array}{ccc}
+4 & 1 & 2\\
+1 & 0 & 2\\
+2 & 1 & 3
+\end{array}\right]
+\]
+
+\end_inset
+
+If two columns of 
+\begin_inset Formula $\mathbf{I}$
+\end_inset
+
+ are interchanged to get an elementary column matrix 
+\begin_inset Formula $\mathbf{E}_{1}$
+\end_inset
+
+ and if 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ is then postmultiplied by 
+\begin_inset Formula $\mathbf{E}_{1}$
+\end_inset
+
+, the corresponding columns of 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ are interchanged,
+\begin_inset Formula 
+\[
+\mathbf{A}\mathbf{E}_{1}=\left[\begin{array}{ccc}
+2 & 1 & 3\\
+1 & 0 & 2\\
+4 & 1 & 2
+\end{array}\right]\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 0 & 1\\
+0 & 1 & 0
+\end{array}\right]=\left[\begin{array}{ccc}
+2 & 3 & 1\\
+1 & 2 & 0\\
+4 & 2 & 1
+\end{array}\right].
+\]
+
+\end_inset
+
+If the elements of a row of 
+\begin_inset Formula $\mathbf{I}$
+\end_inset
+
+ are multiplied by the nonzero scalar 
+\begin_inset Formula $k$
+\end_inset
+
+ to get the elementary row matrix 
+\begin_inset Formula $\mathbf{E}_{2}$
+\end_inset
+
+, premultiplying 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ by 
+\begin_inset Formula $\mathbf{E}_{2}$
+\end_inset
+
+ multiplies the elements of the corresponding row of 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ by 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ If the elements of a column of 
+\begin_inset Formula $\mathbf{I}$
+\end_inset
+
+ are multiplied by the nonzero scalar 
+\begin_inset Formula $k$
+\end_inset
+
+ to get 
+\begin_inset Formula $\mathbf{E}_{2}$
+\end_inset
+
+, postmultiplyinq 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ by 
+\begin_inset Formula $\mathbf{E}_{2}$
+\end_inset
+
+ multiplies the elements of the corresponding column of 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ by 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ These two situations are illustrated below.
+\begin_inset Formula 
+\begin{align*}
+\mathbf{E}_{2}\mathbf{A} & =\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & k & 0\\
+0 & 0 & 1
+\end{array}\right]\left[\begin{array}{ccc}
+2 & 1 & 3\\
+1 & 0 & 2\\
+4 & 1 & 2
+\end{array}\right]=\left[\begin{array}{ccc}
+2 & 1 & 3\\
+k & 0 & 2k\\
+4 & 1 & 2
+\end{array}\right].\\
+\mathbf{A}\mathbf{E}_{2} & =\left[\begin{array}{ccc}
+2 & 1 & 3\\
+1 & 0 & 2\\
+4 & 1 & 2
+\end{array}\right]\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & k
+\end{array}\right]=\left[\begin{array}{ccc}
+2 & 1 & 3k\\
+1 & 0 & 2k\\
+4 & 1 & 2k
+\end{array}\right].
+\end{align*}
+
+\end_inset
+
+If the elements of the 
+\begin_inset Formula $i$
+\end_inset
+
+-th row of 
+\begin_inset Formula $\mathbf{I}$
+\end_inset
+
+ are multiplied by the scalar 
+\begin_inset Formula $k$
+\end_inset
+
+ and then the products are added to the corresponding elements of the 
+\begin_inset Formula $j$
+\end_inset
+
+-th row to get the elementary row matrix 
+\begin_inset Formula $\mathbf{E}_{3}$
+\end_inset
+
+, premultiplyinq 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ by 
+\begin_inset Formula $\mathbf{E}_{3}$
+\end_inset
+
+ multiplies the elements of the 
+\begin_inset Formula $i$
+\end_inset
+
+-th row by 
+\begin_inset Formula $k$
+\end_inset
+
+ and adds the products to the corresponding elements of the 
+\begin_inset Formula $j$
+\end_inset
+
+-th row.
+ If the elements of the 
+\begin_inset Formula $i$
+\end_inset
+
+-th column of 
+\begin_inset Formula $\mathbf{I}$
+\end_inset
+
+ are multiplied by the scalar 
+\begin_inset Formula $k$
+\end_inset
+
+ and the products are added to the corresponding elements of the 
+\begin_inset Formula $i$
+\end_inset
+
+-th column to get 
+\begin_inset Formula $\mathbf{E}_{3}$
+\end_inset
+
+, the elementary column matrix, then postmultiplyinq 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ by 
+\begin_inset Formula $\mathbf{E}_{3}$
+\end_inset
+
+ multiplies the elements of the 
+\begin_inset Formula $i$
+\end_inset
+
+-th column of 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ by 
+\begin_inset Formula $k$
+\end_inset
+
+ and adds the products to the corresponding elements of the 
+\begin_inset Formula $j$
+\end_inset
+
+-th column.
+ For example,
+\begin_inset Formula 
+\begin{align*}
+\mathbf{E}_{3}\mathbf{A} & =\left[\begin{array}{ccc}
+1 & 0 & 0\\
+k & 1 & 0\\
+0 & 0 & 1
+\end{array}\right]\left[\begin{array}{ccc}
+2 & 1 & 3\\
+1 & 0 & 2\\
+4 & 1 & 2
+\end{array}\right]=\left[\begin{array}{ccc}
+2 & 1 & 3\\
+2k+1 & k+0 & 3k+2\\
+4 & 1 & 2
+\end{array}\right].\\
+\mathbf{A}\mathbf{E}_{3} & =\left[\begin{array}{ccc}
+2 & 1 & 3\\
+1 & 0 & 2\\
+4 & 1 & 2
+\end{array}\right]\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+k & 0 & 1
+\end{array}\right]=\left[\begin{array}{ccc}
+2+3k & 1 & 3\\
+1+2k & 0 & 2\\
+4+2k & 1 & 2
+\end{array}\right].
+\end{align*}
+
+\end_inset
+
+Note that the elementary matrices are nonsingular, since they are equivalent
+ to 
+\begin_inset Formula $\mathbf{I}$
+\end_inset
+
+.
+ An immediate consequence of the definitions of elementary matrices is the
+ following theorem.
+\end_layout
+
+\begin_layout Theorem
+Every elementary matrix has an inverse of the same type.
+\end_layout
+
+\begin_layout Standard
+We now consider a few of the important properties and consequences of the
+ use of elementary matrices, giving these properties in the form of theorems.
+\end_layout
+
+\begin_layout Theorem
+Any nonsinqular matrix can be written as the product of elementary matrices.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+The size and rank of a matrix 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ are not altered by premultiplyinq or postmultiplying 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ by elementary matrices.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+If matrices 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+ are nonsingular, Then for any matrix 
+\begin_inset Formula $\mathbf{C}$
+\end_inset
+
+, the 'matrices 
+\begin_inset Formula $\mathbf{C}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{AC}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{CB}$
+\end_inset
+
+, and 
+\begin_inset Formula $\mathbf{ACB}$
+\end_inset
+
+ all have the same rank (assuming all multiplications are defined).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+If 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ is an 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrix of rank 
+\begin_inset Formula $r$
+\end_inset
+
+, then there exist nonsingular matrices 
+\begin_inset Formula $\mathbf{P}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{Q}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\mathbf{PAQ}$
+\end_inset
+
+ is equal to
+\begin_inset Formula 
+\[
+\mathbf{I},\quad\begin{bmatrix}\mathbf{I} & \mathbf{0}\end{bmatrix}\quad\left[\begin{array}{c}
+\mathbf{I}\\
+\mathbf{0}
+\end{array}\right],\quad or\ \left[\begin{array}{cc}
+\mathbf{I} & \mathbf{0}\\
+\mathbf{0} & \mathbf{0}
+\end{array}\right],
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $m=n=r$
+\end_inset
+
+; 
+\begin_inset Formula $m=r<n$
+\end_inset
+
+; 
+\begin_inset Formula $m>r=n$
+\end_inset
+
+; 
+\begin_inset Formula $m>r$
+\end_inset
+
+, 
+\begin_inset Formula $n>r$
+\end_inset
+
+, respectively, and where 
+\begin_inset Formula $\mathbf{I}$
+\end_inset
+
+ is the 
+\begin_inset Formula $r\times r$
+\end_inset
+
+ identity matrix.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+Two matrices, 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+, of the same size are equivalent if and only if 
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+ can be obtained by premultiplyinq and postmultiplyinq 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ by a finite number of elementary matrices.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+The rank of the product of matrices 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+ cannot exceed the rank of either 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ or 
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+A nonsinqular matrix 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ can always be reduced to 
+\begin_inset Formula $\mathbf{I}$
+\end_inset
+
+ by elementary row (or column) transformation matrices only.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+If 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ is an 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrix of rank 
+\begin_inset Formula $r$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+ is a matrix of size 
+\begin_inset Formula $n\times p$
+\end_inset
+
+ and the product of these matrices is the zero matrix, that is,
+\begin_inset Formula 
+\begin{equation}
+\mathbf{AX}=\mathbf{0}
+\end{equation}
+
+\end_inset
+
+then
+\end_layout
+
+\begin_layout Enumerate
+there exists a matrix 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+ of rank 
+\begin_inset Formula $n-r$
+\end_inset
+
+ such that Eq.
+ 1.6.1 is satlsfied,
+\end_layout
+
+\begin_layout Enumerate
+the rank of 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+ cannot exceed 
+\begin_inset Formula $n-r$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+If 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ is a square matrix of size 
+\begin_inset Formula $n$
+\end_inset
+
+ that has rank 
+\begin_inset Formula $r$
+\end_inset
+
+, then there exists a nonzero matrix 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\mathbf{AX}=\mathbf{0}$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $r<n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+If 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ is all 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ matrix and if 
+\begin_inset Formula $m<n$
+\end_inset
+
+, then there exists a nonzero matrix 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\mathbf{AX}=\mathbf{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+The rank of 
+\begin_inset Formula $\mathbf{A}+\mathbf{B}$
+\end_inset
+
+ is less than or equal to the rank of 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ plus the rank of 
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+If 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ is an 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix, then 
+\begin_inset Formula $\mathrm{det}(\mathbf{A})=0$
+\end_inset
+
+ if and only if rank 
+\begin_inset Formula $(\mathbf{A})<n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Quadratic Forms
+\end_layout
+
+\begin_layout Standard
+We shall define a function 
+\begin_inset Formula $f$
+\end_inset
+
+ of 
+\begin_inset Formula $n$
+\end_inset
+
+ variables 
+\begin_inset Formula $x_{1},x_{2},\ldots,x_{n}$
+\end_inset
+
+ by
+\begin_inset Formula 
+\begin{align}
+f & =\left\{ (x_{1},\ x_{2},\ \ldots,\ x_{n},\ y):y=\sum_{j=1}^{n}\sum_{i=1}^{n}a_{ij}x_{i}x_{j}\right\} \nonumber \\
+ & \textrm{ where }a_{ij}\textrm{ is a given set of numbers,}\ -\infty<x_{i}<\infty,\ i=1,2,\ldots,n
+\end{align}
+
+\end_inset
+
+In other words, the value of 
+\begin_inset Formula $f$
+\end_inset
+
+ at the point 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+ is 
+\begin_inset Formula $f(\mathbf{x})$
+\end_inset
+
+, where
+\begin_inset Formula 
+\begin{equation}
+f(\mathbf{x})=\sum_{j=1}^{n}\sum_{i=1}^{n}a_{ij}x_{i}x_{j}.
+\end{equation}
+
+\end_inset
+
+This can also be written as
+\begin_inset Formula 
+\begin{equation}
+f(\mathbf{x})=\mathbf{x}'\mathbf{A}\mathbf{x}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ is an 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix with 
+\begin_inset Formula $ij$
+\end_inset
+
+-th element equal to 
+\begin_inset Formula $a_{ij}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+ is an 
+\begin_inset Formula $n\times1$
+\end_inset
+
+ vector with 
+\begin_inset Formula $i$
+\end_inset
+
+-th element equal to 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

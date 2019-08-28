@@ -1,0 +1,609 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+
+
+%*********************************************************************
+
+\usepackage[hangul]{kotex}
+
+
+
+%*********************************************************************
+
+%\usepackage{unicode-math}
+%\setmathfont{Cambria Math}
+%\usepackage{mathptmx}
+
+
+
+% The following loads mtpro2 lite and defines some common options
+%\usepackage[lite,subscriptcorrection,slantedGreek,nofontinfo]{mtpro2}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\theoremstyle{definition}
+
+%\newtheorem{defi}{정의}
+%\newtheorem{thm}{정리}
+%\newtheorem{lem}{보조정리}
+%\newtheorem{cor}{따름정리}
+
+%*********************************************************************
+
+
+%*********************************************************************
+\end_preamble
+\use_default_options false
+\begin_modules
+theorems-std
+theorems-sec
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding utf8
+\fontencoding T1
+\font_roman "times" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "newtxmath" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 2
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\align center
+
+\series bold
+Introduction
+\end_layout
+
+\begin_layout Standard
+Because matrices are used so extensively in the theory and application of
+ statistics, it is impossible in this one book to discuss all of the subjects
+ in statistics in which they play a significant role.
+ Therefore, this book is primarily concerned with the areas of multivariate
+ analysis and the linear model.
+ The theory of the linear model is actually a part of multivariate analysis,
+ but they are often discussed separately.
+ These two topics include important areas in statistics, such as design
+ of experiments; analysis of variance; correlation; regression; least squares;
+ components of variance-areas that comprise a large segment of the theory
+ and application of statistics.
+ Since we make no systematic development of these topics, we shall discuss
+ each briefly here and refer to this discussion throughout the book as we
+ point out statistical examples where matrices are used.
+ It is assumed that the reader interested in the statistical applications
+ is acquainted with the basic theory of statistics involved.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Multivariate Analysis
+\emph default
+, In the theory of multivariate analysis, one considers the joint distribution
+ of 
+\begin_inset Formula $n$
+\end_inset
+
+ random variables 
+\begin_inset Formula $y_{1},y_{2},...,y_{n}$
+\end_inset
+
+, which we generally write as the elements of a column vector 
+\begin_inset Formula $\mathbf{y}$
+\end_inset
+
+, where
+\begin_inset Formula 
+\[
+\mathbf{y}=\left[\begin{array}{c}
+y_{1}\\
+y_{2}\\
+\vdots\\
+y_{n}
+\end{array}\right]
+\]
+
+\end_inset
+
+we call this a random 
+\begin_inset Formula $n\times1$
+\end_inset
+
+ vector.
+ We are generally interested in the (arithmetic) mean, called the expected
+ value, of each component, in the variance of each component, and the covariance
+ of each pair of elements of 
+\begin_inset Formula $\mathbf{y}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The mean of y, which we denote by 
+\begin_inset Formula $\boldsymbol{\mu}$
+\end_inset
+
+, is an 
+\begin_inset Formula $n\times1$
+\end_inset
+
+ vector whose 
+\begin_inset Formula $i$
+\end_inset
+
+-th component is the mean of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ ; that is,
+\begin_inset Formula 
+\[
+\boldsymbol{\mu=}\left[\begin{array}{c}
+\mu_{1}\\
+\vdots\\
+\mu_{n}
+\end{array}\right]=\left[\begin{array}{c}
+\mathscr{E}(y_{1})\\
+\vdots\\
+\mathscr{E}(y_{n})
+\end{array}\right]=\mathscr{E}(\mathbf{y})
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\mathscr{E}(y_{i})$
+\end_inset
+
+ stands for the expected value of the random variable 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+, and 
+\begin_inset Formula $\mathscr{E}(\mathbf{y})$
+\end_inset
+
+ is defined in terms of these elements.
+\end_layout
+
+\begin_layout Standard
+To systematize the variances and covariances of the elements of 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\mathbf{y}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+, we define an 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ matrix 
+\begin_inset Formula $\mathbf{V}$
+\end_inset
+
+, called the covariance of 
+\begin_inset Formula $\mathbf{y}$
+\end_inset
+
+.
+ The 
+\begin_inset Formula $ij$
+\end_inset
+
+-th element 
+\begin_inset Formula $v_{ij}$
+\end_inset
+
+ of 
+\begin_inset Formula $\mathbf{V}$
+\end_inset
+
+, when 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+, is the covariance of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{j}$
+\end_inset
+
+; the 
+\begin_inset Formula $i$
+\end_inset
+
+-th diagonal element 
+\begin_inset Formula $v_{ii}$
+\end_inset
+
+ of 
+\begin_inset Formula $\mathbf{V}$
+\end_inset
+
+ is the variance of 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+.
+ Thus the matrix 
+\begin_inset Formula $\mathbf{V}$
+\end_inset
+
+ is a symmetric matrix and is non-negative.
+ Often nothing more is known about 
+\begin_inset Formula $\mathbf{V}$
+\end_inset
+
+; on the other hand, it is sometimes known that 
+\begin_inset Formula $\mathbf{V}$
+\end_inset
+
+ has a certain form or pattern (see Chapter 8).
+ 
+\end_layout
+
+\begin_layout Standard
+The theory of multivariate analysis often centers around an analysis of
+ a covariance matrix 
+\begin_inset Formula $\mathbf{V}$
+\end_inset
+
+.
+ When this is the case, it may be necessary to find the determinant of 
+\begin_inset Formula $\mathbf{V}$
+\end_inset
+
+, the characteristic roots of 
+\begin_inset Formula $\mathbf{V}$
+\end_inset
+
+, the inverse of 
+\begin_inset Formula $\mathbf{V}$
+\end_inset
+
+ if it exists, and perhaps to determine these and other quantities for certain
+ submatrices of 
+\begin_inset Formula $\mathbf{V}$
+\end_inset
+
+.
+ Among other things, it is often necessary to find marginal and conditional
+ distributions of a subset of 
+\begin_inset Formula $\mathbf{y}$
+\end_inset
+
+; sometimes it is required to find the moments of 
+\begin_inset Formula $\mathbf{y}$
+\end_inset
+
+ or the moment generating (or characteristic) function of 
+\begin_inset Formula $\mathbf{y}$
+\end_inset
+
+.
+ Also it may be necessary to transform from the vector 
+\begin_inset Formula $\mathbf{y}$
+\end_inset
+
+ to new vector 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+, and this transformation may require the evaluation of a Jacobian; it may
+ be necessary to find maximum likelihood or least squares estimators of
+ parameters in the distribution of 
+\begin_inset Formula $\mathbf{y}$
+\end_inset
+
+.
+ Many of these problems can be solved by manipulating vectors and matrices,
+ as we shall point out from time to time (see Chapter 10).
+\end_layout
+
+\begin_layout Standard
+Most of the theory and applications of multivariate analysis involve the
+ normal (or Gaussian) distribution.
+ When this is the distribution under study, the theory of matrices and vectors
+ is particularly helpful.
+ Discussions of multivariate analysis can be found in several good texts.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Linear Model.
+ 
+\emph default
+As tated above, the theory of the linear model (sometimes referred to as
+ the general linear hypothesis) can be considered as a part of multivariate
+ analysis.
+ However, it is often considered as a separate subject.
+ The model can be written as
+\begin_inset Formula 
+\[
+\mathbf{y}=\mathbf{X}\boldsymbol{\beta}+\mathbf{e},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\mathbf{y}$
+\end_inset
+
+ is an 
+\begin_inset Formula $n\times1$
+\end_inset
+
+ random vector of observations, 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+ is an 
+\begin_inset Formula $n\times p$
+\end_inset
+
+ known matrix of constants, 
+\begin_inset Formula $\boldsymbol{\beta}$
+\end_inset
+
+ is a 
+\begin_inset Formula $p\times1$
+\end_inset
+
+ vector of unknown parameters, and 
+\begin_inset Formula $\mathbf{e}$
+\end_inset
+
+ is a vector of unknown errors.
+ The 
+\begin_inset Formula $e_{i}$
+\end_inset
+
+ are generally assumed to have a mean of zero and to have variance 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+ (unknown), and each pair 
+\begin_inset Formula $e_{i}$
+\end_inset
+
+ , 
+\begin_inset Formula $e_{j}$
+\end_inset
+
+ (
+\begin_inset Formula $i\neq j$
+\end_inset
+
+), is assumed to be uncorrelated.
+ For a discussion of the details of how this model is derived, see [G-7].
+\end_layout
+
+\begin_layout Standard
+We can write this model as
+\begin_inset Formula 
+\[
+\mathbf{y}=\boldsymbol{\mu}+\mathbf{e},
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where of course 
+\begin_inset Formula $\boldsymbol{\mu}=\mathbf{X}\boldsymbol{\beta}=\mathscr{E}(\mathbf{y})$
+\end_inset
+
+ and one of the objectives is to estimate 
+\begin_inset Formula $\boldsymbol{\beta}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+.
+ The method of estimation is usually 
+\emph on
+least squares
+\emph default
+ or 
+\emph on
+maximum likelihood
+\emph default
+.
+ If we denote the estimators by 
+\begin_inset Formula $\widehat{\boldsymbol{\beta}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\widehat{\sigma}^{2}$
+\end_inset
+
+, respectively, then 
+\begin_inset Formula $\widehat{\boldsymbol{\mu}}=\mathbf{X}\widehat{\boldsymbol{\beta}}$
+\end_inset
+
+ is a formula for predicting the mean of 
+\begin_inset Formula $\mathbf{y}$
+\end_inset
+
+ for various values of the matrix 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+.
+ Clearly, the system of equations 
+\begin_inset Formula 
+\[
+\mathbf{y}=\mathbf{X}\boldsymbol{\beta}
+\]
+
+\end_inset
+
+will, in general, not have a solution 
+\begin_inset Formula $\boldsymbol{\beta}$
+\end_inset
+
+ for an observed vector 
+\begin_inset Formula $\mathbf{y}$
+\end_inset
+
+ and matrix 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+.
+ If no solution exists, it may be desirable to find some kind of approximate
+ (say least squares) solution.
+ This is discussed in Chapters 6 and 7.
+\end_layout
+
+\begin_layout Standard
+Often one wants to test certain hypotheses about the parameters 
+\begin_inset Formula $\beta_{i}$
+\end_inset
+
+.
+ This is generally done by the technique called analysis of variance.
+ The procedure is to partition 
+\begin_inset Formula $\mathbf{y'y}$
+\end_inset
+
+ into a set of quadratic forms such that the following equation obtains:
+\begin_inset Formula 
+\[
+\mathbf{y'y}=\mathbf{y'A_{1}y+y'A_{2}y+\cdots+y'A_{k}y}.
+\]
+
+\end_inset
+
+ The procedures available to test certain hypotheses require that each quadratic
+ form 
+\begin_inset Formula $\mathbf{y}'\mathbf{A}_{i}\mathbf{y}$
+\end_inset
+
+ be distributed as a noncentral chi-square variable and that the set of
+ quadratic forms be pairwise independent.
+ The matrices 
+\begin_inset Formula $\mathbf{A}_{i}$
+\end_inset
+
+, depend on the elements of 
+\begin_inset Formula $\mathbf{X}$
+\end_inset
+
+, and sometimes these matrices have a very special structure.
+ The important theorems in determining whether or not 
+\begin_inset Formula $\mathbf{y}'\mathbf{A}_{i}\mathbf{y}$
+\end_inset
+
+ are pairwise independent and are distributed as a chi-square random variable
+ are discussed in [G-7].
+ In general, it is required that the 
+\begin_inset Formula $\mathbf{A}_{i}$
+\end_inset
+
+ be idempotent and that 
+\begin_inset Formula $\mathbf{A}_{i}\mathbf{A}_{j}=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+.
+ These ideas are discussed in Chapters 7, 9, and 12.
+\end_layout
+
+\end_body
+\end_document
